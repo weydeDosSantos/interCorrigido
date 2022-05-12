@@ -24,8 +24,8 @@ public class Metodos {
 		driver.findElement(elemento).sendKeys(texto);
 	}
 
-	public void validarTexto(String texto, By elmento) {
-		String text = driver.findElement(elmento).getText();
+	public void validarTexto(String texto, By elemento) {
+		String text = driver.findElement(elemento).getText();
 		System.out.println(text);
 		assertEquals(texto, text);
 	}

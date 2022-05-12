@@ -30,24 +30,27 @@ public class Steps {
 
 	@Dado("^selecione a politica de privacidade$")
 	public void selecione_a_politica_de_privacidade() throws Throwable {
-	m.pausa(3000);
-	m.preencher(e.getCampoNome(), "cavalheiro automatizador");
-	m.preencher(e.getCampoTelefone(), "11111111111");
-	m.preencher(e.getCampoEmail(), "teste@teste.com");
-	m.preencher(e.getCampoCpf(), "34514913030");
-	m.preencher(e.getCampoDataNascimento(), Keys.chord("34514913030"));
-	m.clicar(e.getBtnCookies());
-	m.clicar(e.getCaixaTratamentosDeDados());
-	m.clicar(e.getBotaoContinuar());
+		m.pausa(3000);
+		m.preencher(e.getCampoNome(), "cavalheiro automatizador");
+		m.preencher(e.getCampoTelefone(), "11111111111");
+		m.preencher(e.getCampoEmail(), "teste@teste.com");
+		m.preencher(e.getCampoCpf(), "34514913030");
+		m.preencher(e.getCampoDataNascimento(), Keys.chord("30121994"));
+		m.clicar(e.getBtnCookies());
+		m.clicar(e.getCaixaTratamentosDeDados());
+
 	}
-	
 
 	@Quando("^selecionar o botao continuar$")
 	public void selecionar_o_botao_continuar() throws Throwable {
+		m.pausa(4000);
+		m.clicar(e.getBotaoContinuar());
 	}
 
 	@Entao("^realizo a validacao do texto Prontinho! Recebemos os seus dados$")
 	public void realizo_a_validacao_do_texto_Prontinho_Recebemos_os_seus_dados() throws Throwable {
+		m.pausa(3000);
+		m.validarTexto("Prontinho! Recebemos os seus dados.", e.getValidacaoTexto());
 	}
 
 }

@@ -12,8 +12,15 @@ public class elementos {
 	private By campoCpf = By.id("cpf");
 	private By campoDataNascimento = By.id("dataNascimento");
 	private By caixaTratamentosDeDados = By.cssSelector("body > div.modal-container > div.style__Container-sc-138k8xa-0.dlLgSU.d-flex.align-items-center > div > div:nth-child(2) > form > div > div:nth-child(6) > div > label");
-	private By botaoContinuar = By.xpath("/html/body/div[5]/div[2]/div/div[2]/form/div/div[7]/button");
+	private By botaoContinuar = By.cssSelector("body > div.modal-container > div.style__Container-sc-138k8xa-0.dlLgSU.d-flex.align-items-center > div > div:nth-child(2) > form > div > div.col-12.text-center > button");
 	private By btnCookies = By.id("onetrust-accept-btn-handler");
+	private By validacaoTexto = By.cssSelector("body > div.modal-container > div.style__Container-sc-138k8xa-0.dlLgSU.d-flex.align-items-center.sent > div > p");
+	public By getValidacaoTexto() {
+		return validacaoTexto;
+	}
+	public void setValidacaoTexto(By validacaoTexto) {
+		this.validacaoTexto = validacaoTexto;
+	}
 	public By getBtnCookies() {
 		return btnCookies;
 	}
