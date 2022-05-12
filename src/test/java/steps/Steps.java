@@ -15,8 +15,8 @@ public class Steps {
 	elementos e = new elementos();
 
 	@Dado("^que o usuario acesse a url \"([^\"]*)\"$")
-	public void que_o_usuario_acesse_a_url(String arg1) throws Throwable {
-		m.execultarNavegador(arg1);
+	public void que_o_usuario_acesse_a_url(String url) throws Throwable {
+		m.execultarNavegador(url);
 	}
 
 	@Dado("^selecione o campo abra a sua conta$")
